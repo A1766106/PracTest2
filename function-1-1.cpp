@@ -11,7 +11,7 @@ int *array_pad(int *vals, int len)
     *pv = *vals;
     for(int i=1;i<len+1;i++)
     {
-        cin >> *(pv+i);
+        *(pv+i) = *(vals-1);
     }
     *(pv+len+1) = *(vals+len-1);
     return pv;
