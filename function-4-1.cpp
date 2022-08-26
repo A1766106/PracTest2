@@ -5,6 +5,12 @@
 
 using namespace std;
 
+ModCounter::ModCounter(int init,int bound)
+{
+    current_val = init;
+    boundary = bound;
+}
+
 void ModCounter::decrement()
 {
     if(current_val == 0)
@@ -32,9 +38,4 @@ void ModCounter::increment()
         current_val = current_val + 1;
     }
     return;
-}
-ModCounter::ModCounter(int init,int bound)
-{
-    current_val = init;
-    boundary = bound;
 }
