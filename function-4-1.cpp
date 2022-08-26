@@ -13,7 +13,7 @@ ModCounter::ModCounter(int init,int bound)
 
 void ModCounter::decrement()
 {
-    if(current_val == 0)
+    if(current_val <= 0)
     {
         current_val = boundary;
     }
@@ -25,7 +25,7 @@ void ModCounter::decrement()
 }
 void ModCounter::increment()
 {
-    if(current_val == boundary)
+    if(current_val >= boundary)
     {
         current_val = 0;
     }
