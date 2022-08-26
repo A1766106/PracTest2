@@ -8,7 +8,7 @@ using namespace std;
 ModCounter::ModCounter(int init,int bound)
 {
     boundary = bound;
-    if (init >=0 init <=bound && ) {
+    if (init >=0 && init <=bound ) {
         current_val = init;
     } else {
         current_val = 0;
