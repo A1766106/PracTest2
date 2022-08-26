@@ -5,21 +5,21 @@
 
 using namespace std;
 
-void decrement()
+void ModCounter::decrement()
 {
-    current_val = current_val - 1;
+    current_val = get_val() - 1;
     return;
 }
-int get_val()
+int ModCounter::get_val()
 {
     return current_val;
 }
-void increment()
+void ModCounter::increment()
 {
-    current_val = current_val + 1;
+    current_val = get_val() + 1;
     return;
 }
-ModCounter(int init,int bound)
+ModCounter::ModCounter(int init,int bound)
 {
     current_val = init;
     boundary = bound;
