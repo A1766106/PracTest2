@@ -8,12 +8,14 @@ int *array_pad(int *vals, int len)
 {
     int *pv;
     pv = new int[len+2];
-    *pv = *vals;
+    *(pv) = *(vals);
     for(int i=1;i<len+1;i++)
     {
-        *(pv+i) = *(vals-1);
+        int transfer = *(vals+i-1);
+        *(pv+i) = transfer;
     }
     *(pv+len+1) = *(vals+len-1);
+
     return pv;
  }
 
