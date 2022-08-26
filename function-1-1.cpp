@@ -11,8 +11,7 @@ int *array_pad(int *vals, int len)
     *(pv) = *(vals);
     for(int i=1;i<len+1;i++)
     {
-        int transfer = *(vals+i-1);
-        *(pv+i) = transfer;
+        *(pv+i)  = *(vals+i-1);
     }
     *(pv+len+1) = *(vals+len-1);
 
