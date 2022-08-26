@@ -23,10 +23,6 @@ void ModCounter::decrement()
     }
     return;
 }
-int ModCounter::get_val()
-{
-    return current_val;
-}
 void ModCounter::increment()
 {
     if(current_val == boundary)
@@ -38,4 +34,8 @@ void ModCounter::increment()
         current_val = current_val + 1;
     }
     return;
+}
+int ModCounter::get_val()
+{
+    return current_val;
 }
