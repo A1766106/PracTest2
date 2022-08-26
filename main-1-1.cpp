@@ -12,10 +12,5 @@ int main()
     int length = 5;
     int *pv=array_pad(vals,5);
 
-    for(int i=0;i<length+2; i++)
-    {
-        cout << *(pv+i) << endl;
-    }
-
     return 0;
 }

@@ -7,13 +7,13 @@ using namespace std;
 int *array_pad(int *vals, int len)
 {
     int *pv;
-    pv = new int[len];
+    pv = new int[len+2];
     *pv = *vals;
     for(int i=1;i<len+1;i++)
     {
         cin >> *(pv+i);
     }
-    *(pv+len+2) = *(vals+len);
+    *(pv+len+1) = *(vals+len-1);
     return pv;
  }
 
