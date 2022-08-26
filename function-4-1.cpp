@@ -5,11 +5,6 @@
 
 using namespace std;
 
-void decrement();
-int get_val();
-void increment();
-ModCounter(int init,int bound);
-
 void decrement()
 {
     current_val = current_val - 1;
