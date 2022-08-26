@@ -7,7 +7,14 @@ using namespace std;
 
 void ModCounter::decrement()
 {
-    current_val = get_val() - 1;
+    if(current_val == 0)
+    {
+        current_val = boundary;
+    }
+    else if (current_val != 0)
+    {
+        current_val = current_val - 1;
+    }
     return;
 }
 int ModCounter::get_val()
@@ -16,7 +23,14 @@ int ModCounter::get_val()
 }
 void ModCounter::increment()
 {
-    current_val = get_val() + 1;
+    if(current_val == boundary)
+    {
+        current_val = 0;
+    }
+    else if (current_val != boundary)
+    {
+        current_val = current_val + 1;
+    }
     return;
 }
 ModCounter::ModCounter(int init,int bound)
